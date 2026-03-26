@@ -26,18 +26,16 @@ start:
 	} else if choose == 2 {
 		fmt.Println("final subtraction answer :", fmt.Sprint(cal1-cal2))
 	} else if choose == 3 {
+		if cal2 == 0 {
+			fmt.Println("error cannot be divided 0")
+		} else {
 
-		fmt.Println("final division answer :", fmt.Sprint(cal1/cal2))
+			fmt.Println("final division answer :", fmt.Sprint(cal1/cal2))
+		}
 
 	} else if choose == 4 {
 		fmt.Println("final multiplication answer :", fmt.Sprint(cal1*cal2))
-		
 
-	} else {
-		if cal1 %2 == 0 {
-			fmt.Println("error division 0")
-		}
-		fmt.Println("error out of range")
 	}
 
 	goto start
