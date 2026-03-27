@@ -15,31 +15,32 @@ start:
 
 	var n, a int
 
-	fmt.Print("input first : ")
+	fmt.Print(ot +"input first : "+ reset)
 	cal1, err := fmt.Scanf("%v\n", &n)
 	
 	
 
 	if err != nil {
-		fmt.Println("== Input an number ==",cal1)
-		goto start
+		fmt.Println(red +"== Input an number =="+ reset,)
+		
 	}
 
-	fmt.Print("input second : ")
+	fmt.Print(ot +"input second : "+ reset,)
 	cal2, err := fmt.Scanf("%v\n", &a)
 	
 	if err != nil {
-		fmt.Println("== Input a valid number ==",cal2)
-		goto start
+		fmt.Println(red +"== Input a valid number =="+ reset,)
+		
 	}
+	fmt.Println(cal1,cal2)
 
-	fmt.Println("choose your way")
-	fmt.Println("(1) add")
-	fmt.Println("(2) subtract")
-	fmt.Println("(3) divide")
-	fmt.Println("(4) multiply")
-	fmt.Println("(5) help menu")
-	fmt.Println("(6) QUIT")
+	fmt.Println(ma +"choose your way"+reset)
+	fmt.Println(ma +"(1) add"+ reset)
+	fmt.Println(ma +"(2) subtract"+ reset)
+	fmt.Println(ma +"(3) divide" + reset)
+	fmt.Println( ma +"(4) multiply"+ reset)
+	fmt.Println(ma +"(5) HELP" + reset)
+	fmt.Println(ma +"(6) QUIT"+ reset)
 
 	var choose string
 	fmt.Scanln(&choose)
@@ -55,17 +56,18 @@ start:
 			fmt.Println(red +"=== error cannot be divided 0 ==="+ reset)
 		} else {
 
-			fmt.Println(ma + "==final division answer ==:" + reset, fmt.Sprint(n/a))
+			fmt.Println(ma + "==final division answer ==:" + reset, fmt.Sprint(n/a),"//REMAINDER// == ",n%a)
 		}
 
 	} else if choose == "4" {
-		fmt.Println(red + "==final multiplication answer ==:" + reset, fmt.Sprint(n*a))
+		fmt.Println(ma + "==final multiplication answer ==:" + reset, fmt.Sprint(n*a))
 
 	} else if choose == "5" {
 		fmt.Println(ot +"this is a special edition of calculator " + reset)
 		fmt.Println(ot +"after inputing the values you choose either to add to subtract to divid or to exit" + reset)
 		fmt.Println(ot +"either to add to subtract to divid or to exit"+ reset)
 		fmt.Println(ot +"but to exit you have to retype same value twice and after that it will come out"+ reset)
+		fmt.Println(ot +"to add press (1) \n to subtract (2) \n to divide (3) \n to multiply (4) \n to enter help (5)"+ reset)
 		
 	}else if choose == "6"{
 		fmt.Println(ma +"==THANK YOU for calcutating==" + reset)
