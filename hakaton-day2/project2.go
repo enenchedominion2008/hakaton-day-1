@@ -23,7 +23,7 @@ start2:
         fmt.Println(idk + "when you enter you will see a menu that will ask you to select the type of conversion you wantvto make" + reset)
         fmt.Println(idk + "(1) if you select the first it means that you want to convert hexadecimal to decimal eg 1E" + reset)
         fmt.Println(idk + "(2) the second is to convert binary to decimal eg 1100011" + reset)
-        fmt.Println(idk + "(3) the third option is to convert decimal to binary " + reset)
+        fmt.Println(idk + "(3) if you want to see the output of all conversions then press 3 " + reset)
         fmt.Println(dom + "NOTE : YOU CANNOT EXIT THE APP UNTIL YOU FINISH CONVERSIONS" + reset)
 
     }
@@ -44,7 +44,7 @@ start1:
     fmt.Println(col + "please input your choice of conversion" + reset)
     fmt.Println("(1) HexToDec")
     fmt.Println("(2) BinToDec")
-    fmt.Println("(3) DecTobin")
+    fmt.Println("(3) DecTobin/ToHEX/ToBin")
 
     fmt.Scan(&choose)
 
