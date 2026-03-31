@@ -24,7 +24,15 @@ func snake(s string) string {
 		return strings.ReplaceAll(s," ","_")
 	}
 	return s
+} 
+func reverse(text string) string {
+    
+    word := []rune(text)
+    for i, j := 0, len(word)-1; i < j; i, j = i+1, j-1 {
+        word[i], word[j] = word[j], word[i]
 }
+return string(word)
+} 
 
 
 func main() {
@@ -33,9 +41,10 @@ func main() {
 	
 	var choose string
 	fmt.Println("input your method of conversion")
-	fmt.Println("upper")
-	fmt.Println("low")
-	fmt.Println("cap")
+	fmt.Println("upper :")
+	fmt.Println("low :")
+	fmt.Println("cap :")
+	fmt.Println("reverse :")
 	fmt.Scan(&choose)
 	var input string
 	reader := bufio.NewReader(os.Stdin)
@@ -58,5 +67,8 @@ func main() {
 	}
 	if choose == "snake"  {
 		fmt.Println(snake(input))
+	} 
+	if choose == "reverse" {
+		fmt.Println(reverse(input))
 	}
 }
