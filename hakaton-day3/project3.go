@@ -19,6 +19,12 @@ func cap(s string) string {
 	s = strings.ToLower(s)
 	return strings.Title(s)
 }
+func snake(s string) string {
+	if s != " " {
+		return strings.ReplaceAll(s," ","_")
+	}
+	return s
+}
 
 
 func main() {
@@ -51,6 +57,6 @@ func main() {
 		fmt.Println(cap(input))
 	}
 	if choose == "snake"  {
-		fmt.Println(strings.ReplaceAll(" " , "_","_"))
+		fmt.Println(snake(input))
 	}
 }
