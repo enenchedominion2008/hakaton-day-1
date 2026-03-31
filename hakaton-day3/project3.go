@@ -37,8 +37,21 @@ return string(word)
 
 func main() {
 	
-
-	
+	start :
+	var help string 
+	fmt.Println("press (CONTINUE to use app or (HELP)")
+	fmt.Scan(&help)
+	if help == "help" {
+		fmt.Println("i will")
+		goto start
+	} 
+	if help == "continue" {
+		goto start2
+	}
+	if help != "enter" && help != "ccontinue" {
+		fmt.Println("error please type (CONTINUE OR ENTER)")
+	}
+	start2 :
 	var choose string
 	fmt.Println("input your method of conversion")
 	fmt.Println("upper :")
@@ -46,6 +59,12 @@ func main() {
 	fmt.Println("cap :")
 	fmt.Println("reverse :")
 	fmt.Scan(&choose)
+	if choose != "cap" && choose != "low" && choose != "upper" && choose != "reverse" {
+		fmt.Println("plase input something with the instructions")
+		goto start2
+	}
+	
+
 	var input string
 	reader := bufio.NewReader(os.Stdin)
 	input, _ = reader.ReadString('\n')
@@ -70,5 +89,10 @@ func main() {
 	} 
 	if choose == "reverse" {
 		fmt.Println(reverse(input))
+	} 
+	if choose == "quit" {
+		fmt.Println("  Shutting down String Transformer. Goodbye.")
+		return
 	}
+	goto start
 }
