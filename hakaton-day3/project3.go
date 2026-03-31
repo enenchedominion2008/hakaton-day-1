@@ -48,7 +48,7 @@ func main() {
 	if help == "continue" {
 		goto start2
 	}
-	if help != "enter" && help != "ccontinue" {
+	if help != "enter" && help != "continue" {
 		fmt.Println("error please type (CONTINUE OR ENTER)")
 	}
 	start2 :
