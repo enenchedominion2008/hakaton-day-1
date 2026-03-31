@@ -1,30 +1,32 @@
-package main 
+package main
 
 import (
-	"fmt"
-	"strings"
 	"bufio"
+	"fmt"
 	"os"
+	"strings"
 )
 
-func main()  {
-
+func main() {
 	var input string
+
 	
-	reader := bufio.NewReader(os.Stdin)	
-	input, _ = reader.ReadString('\n') 
+	var choose string
+	fmt.Println("input your method of conversion")
+	fmt.Println("uppercase")
+	fmt.Println("lowecase")
+	fmt.Scan(&choose)
+
+	reader := bufio.NewReader(os.Stdin)
+	input, _ = reader.ReadString('\n')
 	input = strings.TrimSpace(input)
 
 
-	fmt.Println("input your code")
-	fmt.Scan(&input)
-	
+	// fmt.Println("put your words")
+	fmt.Scan(&reader)
 
-	var choose string
-	fmt.Println("input your method (1)"  )
-	fmt.Scan(&choose)
 	if choose == "1" {
 		fmt.Println(strings.ToUpper(input))
 	}
-	
+
 }
