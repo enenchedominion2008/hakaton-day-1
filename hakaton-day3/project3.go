@@ -9,10 +9,13 @@ import (
 
 func main()  {
 
+	var input string
 	
-	
-	input :=  bufio.NewReader(os.Stdin)
-	
+	reader := bufio.NewReader(os.Stdin)	
+	input, _ = reader.ReadString('\n') 
+	input = strings.TrimSpace(input)
+
+
 	fmt.Println("input your code")
 	fmt.Scan(&input)
 	
