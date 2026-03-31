@@ -7,33 +7,50 @@ import (
 	"strings"
 )
 
+func toupp(s string) string {
+	
+	return strings.ToUpper(s)
+}
+
+func Tolow(s string) string {
+	return strings.ToLower(s)
+}
+func cap(s string) string {
+	s = strings.ToLower(s)
+	return strings.Title(s)
+}
+
+
 func main() {
-	var input string
+	
 
 	
 	var choose string
 	fmt.Println("input your method of conversion")
-	fmt.Println("uppercase")
-	fmt.Println("lowecase")
-	fmt.Println("capitalize")
+	fmt.Println("upper")
+	fmt.Println("low")
+	fmt.Println("cap")
 	fmt.Scan(&choose)
-
+	var input string
 	reader := bufio.NewReader(os.Stdin)
 	input, _ = reader.ReadString('\n')
 	input = strings.TrimSpace(input)
-
+	
 
 	
 	fmt.Scan(&reader)
 
-	if choose == "uppercase" {
-		fmt.Println(strings.ToUpper(input))
+	if choose == "upper" {
+		fmt.Println(toupp(input))
 	}
-	if choose == "lowercase" {
-		fmt.Println(strings.ToLower(input))
+	if choose == "low" {
+		fmt.Println(Tolow(input))
 	}
 	if choose == "cap" {
-		input = strings.ToLower(input)
-		fmt.Println(strings.Title(input))
+		
+		fmt.Println(cap(input))
+	}
+	if choose == "snake"  {
+		fmt.Println(strings.ReplaceAll(" " , "_","_"))
 	}
 }
