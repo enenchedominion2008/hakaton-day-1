@@ -35,3 +35,36 @@ Output:
 textJohn
 Jane
 2
+
+Go Multiple Variables - Quick Summary
+You can declare multiple variables in Go in 3 easy ways:
+
+Same Line (Same Type)Govar a, b, c, d int = 1, 3, 5, 7
+Same Line (Different Types)
+Use var or := without specifying type:Govar a, b = 6, "Hello"
+c, d := 7, "World!"
+In a Block (Cleanest way for many variables)Govar (
+    a int
+    b int = 1
+    c string = "hello"
+)
+
+Key Point:
+If you use var and specify the type, all variables on that line must be the same type.
+
+Go Variable Naming Rules (Simple Summary)
+Rules for naming variables in Go:
+
+Must start with a letter or underscore (_)
+Cannot start with a number
+Can only contain letters, numbers, and underscores (a-z, A-Z, 0-9, _)
+Names are case-sensitive (age, Age, and AGE are different)
+Cannot contain spaces
+Cannot be a Go keyword
+No limit on how long the name can be
+
+Multi-Word Variable Names:
+
+Camel Case: myVariableName
+Pascal Case: MyVariableName
+Snake Case: my_variable_name
